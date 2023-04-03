@@ -2,7 +2,7 @@ import Link from "next/link"
 import { MdOutlineLightMode } from "react-icons/md"
 import {useRef} from "react"
 
-const Intro = ({dark, setDark, visDiv,setVisDiv, introRef}) => {
+const Intro = ({dark, setDark, visDiv,setVisDiv, introRef, aboutOffset}) => {
     const handleDarkMode = () => {
     setDark(!dark)
     console.log(dark)
@@ -13,13 +13,11 @@ const Intro = ({dark, setDark, visDiv,setVisDiv, introRef}) => {
   }
   
   const smoothScroll = () => {
-      window.scrollBy({
-          top: window.innerHeight, 
+      window.scrollTo({
+          top: aboutOffset, 
           left:0, 
           behavior: "smooth"})
 }
-
-
   
     return (
         <>

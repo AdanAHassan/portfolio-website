@@ -11,7 +11,6 @@ import Project from "../components/Project.js"
 import Intro from "../components/Intro.js"
 import Contact from "../components/Contact.js"
 import About from "../components/About.js"
-import Footer from "../components/Footer.js"
 import Navbar from "../components/Navbar.js"
 
 

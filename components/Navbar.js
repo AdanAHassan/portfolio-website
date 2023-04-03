@@ -37,12 +37,14 @@ const Navbar = ({dark, setDark, visDiv, aboutOffset, projectOffset, contactOffse
     }
     
     
+    const [withinIntroBool, setWithinIntroBool] = useState(false)
     const [withinAboutBool, setWithinAboutBool] = useState(false)
     const [withinProjectBool, setWithinProjectBool] = useState(false)
     const [withinContactBool, setWithinContactBool] = useState(false)
     
     if (typeof window !== "undefined") {
             const navChange = () => {
+                setWithinIntroBool(window.scrollY >= 0 && window.scrollY < aboutOffset*0.85)
                 setWithinAboutBool(window.scrollY >= aboutOffset*0.85 && window.scrollY < projectOffset*0.85)
                 setWithinProjectBool(window.scrollY >= projectOffset*0.85 && window.scrollY < contactOffset*0.85)
                 setWithinContactBool(window.scrollY >= contactOffset*0.85)
@@ -54,7 +56,7 @@ const Navbar = ({dark, setDark, visDiv, aboutOffset, projectOffset, contactOffse
   return (
     <div className={`p-4 border-b-2 fixed w-full backdrop-blur-xl z-50 ${visDiv ? "visible" : "invisible"}`}>
       <div className="flex flex-row justify-between items-center" >
-        <div onClick={() => smoothScrollHome()} className="text-xl hover:text-teal-300 hover:scale-150 transition duration-200 ease-in-out cursor-none">
+        <div onClick={() => smoothScrollHome()} className={`text-xl hover:text-teal-300 hover:scale-150 transition duration-200 ease-in-out cursor-none ${ withinIntroBool ? "text-teal-300" : "hover:text-teal-400"}`} >
           <AiFillHome/>
         </div>
         <div className="flex flex-row items-center font-medium text-lg md:text-xl gap-4 ">

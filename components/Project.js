@@ -88,7 +88,7 @@ const projectData = [
         image: "/Screenshots/JSONServer.png"
     }
 ]
-    
+
   return (
     <div ref={projectRef} id="Projects" className="relative flex flex-col justify-start pt-20 p-6 gap-6 min-h-screen overflow-visible">
       <div className="text-2xl">Projects</div>

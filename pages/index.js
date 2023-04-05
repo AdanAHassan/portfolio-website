@@ -84,8 +84,6 @@ const [contactOffset, setContactOffset] = useState(0)
       <Intro 
         dark={dark}
         setDark={setDark}
-        visDiv={visDiv}
-        setVisDiv={setVisDiv}
         introRef={introRef}
         aboutOffset={aboutOffset}
       />
@@ -107,8 +105,6 @@ const [contactOffset, setContactOffset] = useState(0)
       />
       <Contact 
         dark={dark}
-        visDiv={visDiv}
-        setVisDiv={setVisDiv}
       />
     </div>
   )

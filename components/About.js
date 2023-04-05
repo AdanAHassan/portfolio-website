@@ -15,7 +15,7 @@ const About = ({projectOffset}) => {
     <div id="About" className="relative flex flex-col items-center w-screen h-screen snap-center">
         <div className="flex flex-col text-center h-screen pb-40 w-80 justify-center">
             <div className="text-3xl py-4 text-teal-300 font-bold">About Me</div>
-            <div>I am an aspiring web developer based in London.</div>
+            <div>I am an aspiring web developer based in London, England. Coding initially began as a hobby but I am now looking to make this my full time career.</div>
         </div>
         <div onClick={() => smoothScroll()} className="text-3xl absolute p-4 bottom-0 flex flex-row justify-center hover:animate-[bounce_1s_ease-in-out_infinite]" >
             <BsFillArrowDownCircleFill className="hover:fill-teal-300"/>

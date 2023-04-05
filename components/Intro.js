@@ -5,7 +5,6 @@ import {useRef} from "react"
 const Intro = ({dark, setDark, introRef, aboutOffset}) => {
     const handleDarkMode = () => {
     setDark(!dark)
-    console.log(dark)
   }
   
   const smoothScroll = () => {

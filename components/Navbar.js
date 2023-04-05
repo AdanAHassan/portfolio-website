@@ -5,7 +5,6 @@ import { useState, useEffect } from "react"
 const Navbar = ({dark, setDark, visDiv, aboutOffset, projectOffset, contactOffset}) => {
     const handleDarkMode = () => {
     setDark(!dark)
-    console.log(dark)
   }
   
     const smoothScrollHome = () => {
@@ -48,7 +47,6 @@ const Navbar = ({dark, setDark, visDiv, aboutOffset, projectOffset, contactOffse
                 setWithinAboutBool(window.scrollY >= aboutOffset*0.85 && window.scrollY < projectOffset*0.85)
                 setWithinProjectBool(window.scrollY >= projectOffset*0.85 && window.scrollY < contactOffset*0.85)
                 setWithinContactBool(window.scrollY >= contactOffset*0.85)
-                console.log(withinAboutBool, window.scrollY, aboutOffset, projectOffset, contactOffset)
             }
             window.addEventListener("scroll", navChange)
   }

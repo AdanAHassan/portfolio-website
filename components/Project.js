@@ -4,6 +4,7 @@ import {BsFillArrowDownCircleFill} from "react-icons/bs"
 import {TbApi} from "react-icons/tb"
 import Image from "next/image"
 import Link from "next/link"
+import Screenshots from "../public/screenshots/Screenshots.js"
 
 const Project = ({dark, projectRef, contactOffset}) => {
     
@@ -24,6 +25,7 @@ const Project = ({dark, projectRef, contactOffset}) => {
 const projectData = [
     {
         title: "Trip Advisor",
+        title: "Trip-Advisor",
         subtitle: "I created a clone of the Trip Advisor homepage",
         next: false,
         react: true,
@@ -33,10 +35,11 @@ const projectData = [
         demo: "https://adanahassan.github.io/trip-adviser",
         project: false,
         source: "https://github.com/AdanAHassan/trip-adviser",
-        image: "/Screenshots/TripAdviser.png"
+        image: "TripAdviser"
     },
     {
         title: "AWOIAF Wiki",
+        id: "AWOIAF-Wiki",
         subtitle: "I redesigned the AWOIAF wiki page using an example article with hopes to redesign more pages on this site",
         next: true,
         react: true,
@@ -46,10 +49,11 @@ const projectData = [
         demo: "https://adanahassan.github.io/house-frey",
         project: false,
         source: "https://github.com/AdanAHassan/house-frey",
-        image: "/Screenshots/LannisterWiki.png"
+        image: "LannisterWiki"
     },
     {
         title: "Character Filter",
+        id: "Character-Filter",
         subtitle: "I created a search for ASOIAF POV characters with hopes to expand the JSON database to also include non POV characters",
         next: false,
         react: true,
@@ -59,10 +63,11 @@ const projectData = [
         demo: "https://adanahassan.github.io/asoiaf-character",
         project: false,
         source: "https://github.com/AdanAHassan/asoiaf-character",
-        image: "/Screenshots/CharacterCard.png"
+        image: "CharacterCard"
     },
     {
         title: "Portfolio",
+        id: "Portfolio",
         subtitle: "I created a portfolio to display my projects",
         next: true,
         react: true,
@@ -72,10 +77,11 @@ const projectData = [
         demo: "",
         project: true,
         source: "https://github.com/AdanAHassan/portfolio-website",
-        image: "/Screenshots/PortfolioSite.png"
+        image: "PortfolioSite"
     },
     {
         title: "JSON Server",
+        id: "JSON-Server",
         subtitle: "I built and deployed a JSON server to store data that is used in the Character Filter and AWOIAF Wiki projects",
         next: false,
         react: false,
@@ -85,10 +91,11 @@ const projectData = [
         demo: "https://copper-chipmunk-gear.cyclic.app/",
         project: false,
         source: "https://github.com/AdanAHassan/ac-api",
-        image: "/Screenshots/JSONServer.png"
+        image: "JSONServer"
     }
 ]
 
+    
   return (
     <div ref={projectRef} id="Projects" className="relative flex flex-col justify-start pt-20 p-6 gap-6 min-h-screen overflow-visible">
       <div className="text-2xl">Projects</div>
@@ -97,10 +104,10 @@ const projectData = [
         { 
         projectData.map((item, index) => (
         
-         <div className={`flex flex-col items-center hover:cursor-default relative h-44 md:h-60 aspect-video mb-12`}>
+         <div key={`${item.title}-${index}`} className={`flex flex-col items-center hover:cursor-default relative h-44 md:h-60 aspect-video mb-12`}>
             <div className="absolute top-0 h-full w-full z-10">
                 <Image 
-                    src={item.image}
+                    src={Screenshots[item.image]}
                     height="600"
                     width="800"
                     className="h-full w-full object-cover object-top"

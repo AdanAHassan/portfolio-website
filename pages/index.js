@@ -6,7 +6,6 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Router from "next/router"
 import Image from "next/image"
-import TripAdvImg from "../public/Screenshots/TripAdviser.png"
 import Project from "../components/Project.js"
 import Intro from "../components/Intro.js"
 import Contact from "../components/Contact.js"
@@ -65,7 +64,6 @@ const [contactOffset, setContactOffset] = useState(0)
             setAboutOffset(normalHeight)
             setProjectOffset(normalHeight *2)
             setContactOffset(normalHeight*2 + projectHeight)
-            console.log("resize")
         }
         handleScrollValues()
         return () => window.addEventListener("resize", handleScrollValues);

@@ -32,10 +32,10 @@ const projectData = [
         tailwind: true,
         mui: false,
         api: false,
-        demo: "https://adanahassan.github.io/trip-adviser",
+        demo: "https://adanahassan.github.io/trip-advisor",
         project: false,
-        source: "https://github.com/AdanAHassan/trip-adviser",
-        image: "TripAdviser"
+        source: "https://github.com/AdanAHassan/trip-advisor",
+        image: "TripAdvisor"
     },
     {
         title: "AWOIAF Wiki",
@@ -46,9 +46,9 @@ const projectData = [
         tailwind: true,
         mui: false,
         api: false,
-        demo: "https://adanahassan.github.io/house-frey",
+        demo: "https://adanahassan.github.io/wiki",
         project: false,
-        source: "https://github.com/AdanAHassan/house-frey",
+        source: "https://github.com/AdanAHassan/wiki",
         image: "LannisterWiki"
     },
     {

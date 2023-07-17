@@ -3,6 +3,8 @@ import CharacterCard from "./CharacterCard.png"
 import PortfolioSite from "./PortfolioSite.png"
 import TripAdvisor from "./TripAdvisor.png"
 import JSONServer from "./JSONServer.png"
+import LiverpoolHouse from "./LiverpoolHouse.png"
+import Webscraper from "./Webscraper.jpg"
 
 
 export default {
@@ -10,6 +12,8 @@ export default {
   CharacterCard,
   PortfolioSite,
   TripAdvisor,
-  JSONServer
+  JSONServer,
+  LiverpoolHouse,
+  Webscraper
 }
  

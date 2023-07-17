@@ -35,8 +35,8 @@ const projectData = [
       image: "LiverpoolHouse"
     },
     {
-      title: "Webscraper tool",
-      subtitle: "I built a webscraper in order to automate the data entry process for the contents within my wiki project. This saved me hundreds of hours of time in development.",
+      title: "Webscraper",
+      subtitle: "I built a webscraper using Puppeteer for my wiki project saving me hundreds of hours in development",
       node: true,
       puppeteer: true,
       demo: "https://adanahassan.github.io/wiki",
@@ -44,7 +44,7 @@ const projectData = [
       image: "Webscraper"
     },
     {
-      title: "Trip-Advisor",
+      title: "Trip Advisor",
       subtitle: "I created a clone of the Trip Advisor homepage",
       react: true,
       tailwind: true,

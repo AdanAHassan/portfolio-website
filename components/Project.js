@@ -1,4 +1,4 @@
-import {SiTailwindcss, SiReact, SiNextdotjs, SiMaterialui} from "react-icons/si"
+import {SiTailwindcss, SiReact, SiNextdotjs, SiMaterialui, SiPuppeteer, SiNodedotjs, SiTypescript} from "react-icons/si"
 import {AiFillGithub, AiFillPlayCircle} from "react-icons/ai"
 import {BsFillArrowDownCircleFill} from "react-icons/bs"
 import {TbApi} from "react-icons/tb"
@@ -26,39 +26,29 @@ const projectData = [
     {
       title: "Liverpool House",
       subtitle: "I built the website based on a design I liked on dribble",
-      next: false,
+      next: true,
+      typescript: true,
       react: true,
       tailwind: true,
-      mui: false,
-      api: false,
       demo: "https://liverpool-house.vercel.app/",
-      project: false,
       source: "https://github.com/AdanAHassan/liverpool-house",
       image: "LiverpoolHouse"
     },
     {
       title: "Webscraper tool",
       subtitle: "I built a webscraper in order to automate the data entry process for the contents within my wiki project. This saved me hundreds of hours of time in development.",
-      next: false,
-      react: false,
-      tailwind: false,
-      mui: false,
-      api: false,
+      node: true,
+      puppeteer: true,
       demo: "https://adanahassan.github.io/wiki",
-      project: false,
       source: "https://github.com/AdanAHassan/wiki-scraper",
       image: "Webscraper"
     },
     {
       title: "Trip-Advisor",
       subtitle: "I created a clone of the Trip Advisor homepage",
-      next: false,
       react: true,
       tailwind: true,
-      mui: false,
-      api: false,
       demo: "https://adanahassan.github.io/trip-advisor",
-      project: false,
       source: "https://github.com/AdanAHassan/trip-advisor",
       image: "TripAdvisor"
     },
@@ -69,10 +59,7 @@ const projectData = [
       next: true,
       react: true,
       tailwind: true,
-      mui: false,
-      api: false,
       demo: "https://adanahassan.github.io/wiki",
-      project: false,
       source: "https://github.com/AdanAHassan/wiki",
       image: "LannisterWiki"
     },
@@ -80,13 +67,9 @@ const projectData = [
       title: "Character Filter",
       id: "Character-Filter",
       subtitle: "I created a search for ASOIAF POV characters with hopes to expand the JSON database to also include non POV characters",
-      next: false,
       react: true,
-      tailwind: false,
       mui: true,
-      api: false,
       demo: "https://adanahassan.github.io/asoiaf-character",
-      project: false,
       source: "https://github.com/AdanAHassan/asoiaf-character",
       image: "CharacterCard"
     },
@@ -96,9 +79,6 @@ const projectData = [
       subtitle: "I created a portfolio to display my projects",
       next: true,
       react: true,
-      tailwind: true,
-      mui: false,
-      api: false,
       demo: "",
       project: true,
       source: "https://github.com/AdanAHassan/portfolio-website",
@@ -108,13 +88,8 @@ const projectData = [
       title: "JSON Server",
       id: "JSON-Server",
       subtitle: "I built and deployed a JSON server to store data that is used in the Character Filter and AWOIAF Wiki projects",
-      next: false,
-      react: false,
-      tailwind: false,
-      mui: false,
       api: true,
       demo: "https://copper-chipmunk-gear.cyclic.app/",
-      project: false,
       source: "https://github.com/AdanAHassan/ac-api",
       image: "JSONServer"
     }
@@ -142,11 +117,14 @@ const projectData = [
                 <div className={`text-xl md:text-2xl font-medium ${ dark ? "text-slate-100" : "text-black"} `}>{item.title}</div>
                 <div className="text-sm md:text-lg">{item.subtitle}</div>
                 <div className={`flex flex-row gap-3 text-xl md:text-3xl scale-[1.25] ${ dark ? "text-slate-50 hover:text-teal-300" : "text-slate-900 hover:text-teal-50" } transition ease-in-out duration-200`}>
-                    {item.next && <SiNextdotjs />}
-                    {item.react && <SiReact />}
-                    {item.tailwind && <SiTailwindcss/>}
-                    {item.mui && <SiMaterialui />}
-                    {item.api && <TbApi />}
+                  {item.next && <SiNextdotjs />}
+                  {item.react && <SiReact />}
+                  {item.tailwind && <SiTailwindcss/>}
+                  {item.mui && <SiMaterialui />}
+                  {item.api && <TbApi />}
+                  {item.typescript && <SiTypescript />}
+                  {item.node && <SiNodedotjs />}
+                  {item.puppeteer && <SiPuppeteer />}
                 </div>
                 <div className="flex flex-row w-full justify-between text-md md:text-xl">
                     {

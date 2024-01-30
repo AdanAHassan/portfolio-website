@@ -5,6 +5,7 @@ import TripAdvisor from "./TripAdvisor.png"
 import JSONServer from "./JSONServer.png"
 import LiverpoolHouse from "./LiverpoolHouse.png"
 import Webscraper from "./Webscraper.jpg"
+import SMDashboard from "./SMDashboard.png"
 
 
 export default {
@@ -14,6 +15,7 @@ export default {
   TripAdvisor,
   JSONServer,
   LiverpoolHouse,
-  Webscraper
+  Webscraper,
+  SMDashboard
 }
  

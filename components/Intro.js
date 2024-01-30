@@ -1,6 +1,4 @@
-import Link from "next/link"
 import { MdOutlineLightMode } from "react-icons/md"
-import {useRef} from "react"
 
 const Intro = ({dark, setDark, introRef, aboutOffset}) => {
     const handleDarkMode = () => {

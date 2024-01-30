@@ -1,6 +1,7 @@
-import {SiTailwindcss, SiReact, SiNextdotjs, SiMaterialui, SiPuppeteer, SiNodedotjs, SiTypescript} from "react-icons/si"
-import {AiFillGithub, AiFillPlayCircle} from "react-icons/ai"
-import {BsFillArrowDownCircleFill} from "react-icons/bs"
+import { SiTailwindcss, SiReact, SiNextdotjs, SiMaterialui, SiPuppeteer, SiNodedotjs, SiTypescript, SiDotnet, SiMicrosoftsqlserver } from "react-icons/si"
+import { AiFillGithub, AiFillPlayCircle } from "react-icons/ai"
+import { BsFillArrowDownCircleFill } from "react-icons/bs"
+import { FaAngular } from "react-icons/fa";
 import {TbApi} from "react-icons/tb"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,21 +9,32 @@ import Screenshots from "../public/screenshots/Screenshots.js"
 
 const Project = ({dark, projectRef, contactOffset}) => {
     
-    const smoothScrollContact = () => {
-      window.scrollTo({
-          top: contactOffset, 
-          left:0, 
-          behavior: "smooth"})
-    }
-      const smoothScrollIntro = () => {
-      window.scrollTo({
-          top: 0, 
-          left:0, 
-          behavior: "smooth"})
-}
+  const smoothScrollContact = () => {
+    window.scrollTo({
+        top: contactOffset, 
+        left:0, 
+        behavior: "smooth"})
+  }
+  const smoothScrollIntro = () => {
+    window.scrollTo({
+        top: 0, 
+        left:0, 
+        behavior: "smooth"})
+  }
 
 
-const projectData = [
+  const projectData = [
+    {
+      title: "Social Media Dashboard",
+      subtitle: "I built a full stack dashboard as a demo of a real world usecase",
+      dotnet: true,
+      mssql: true,
+      typescript: true,
+      angular: true,
+      tailwind: true,
+      source: "https://github.com/AdanAHassan/SMDash",
+      image: "SMDashboard"
+    },
     {
       title: "Liverpool House",
       subtitle: "I built the website based on a design I liked on dribble",
@@ -117,6 +129,9 @@ const projectData = [
                 <div className={`text-xl md:text-2xl font-medium ${ dark ? "text-slate-100" : "text-black"} `}>{item.title}</div>
                 <div className="text-sm md:text-lg">{item.subtitle}</div>
                 <div className={`flex flex-row gap-3 text-xl md:text-3xl scale-[1.25] ${ dark ? "text-slate-50 hover:text-teal-300" : "text-slate-900 hover:text-teal-50" } transition ease-in-out duration-200`}>
+                  {item.angular && <FaAngular />}
+                  {item.dotnet && <SiDotnet />}
+                  {item.mssql && <SiMicrosoftsqlserver />}
                   {item.next && <SiNextdotjs />}
                   {item.react && <SiReact />}
                   {item.tailwind && <SiTailwindcss/>}
@@ -128,15 +143,15 @@ const projectData = [
                 </div>
                 <div className="flex flex-row w-full justify-between text-md md:text-xl">
                     {
-                    item.project
+                    item.project | !item.demo
                         ?
-                    <div onClick={() => smoothScrollIntro()} className={`flex flex-row items-center gap-1 ${ dark ? "hover:text-teal-300" : "hover:text-slate-50" } transition ease-in-out duration-200 `}>
+                    <div onClick={item.project ? () => smoothScrollIntro() : null} className={`flex flex-row items-center gap-1 ${ dark ? "hover:text-teal-300" : "hover:text-slate-50" } transition ease-in-out duration-200 `}>
                         <div>Live Demo</div>
                         <AiFillPlayCircle />
                     </div>
                         :
                     <Link href={item.demo} className={`flex flex-row items-center gap-1 ${ dark ? "hover:text-teal-300" : "hover:text-slate-50" } transition ease-in-out duration-200 `} target="_blank">
-                        <div>Live Demo</div>
+                    <div>Live Demo</div>
                         <AiFillPlayCircle />
                     </Link>
                     }

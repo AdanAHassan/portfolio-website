@@ -1,4 +1,3 @@
-import {FiMail} from "react-icons/fi"
 import {BsFillArrowUpCircleFill} from "react-icons/bs"
 
 const Contact = ({dark}) => {

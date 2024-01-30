@@ -1,6 +1,6 @@
 import { MdOutlineLightMode } from "react-icons/md"
-import {AiFillGithub, AiFillPlayCircle, AiFillHome} from "react-icons/ai"
-import { useState, useEffect } from "react"
+import { AiFillHome } from "react-icons/ai"
+import { useState } from "react"
 
 const Navbar = ({dark, setDark, visDiv, aboutOffset, projectOffset, contactOffset}) => {
     const handleDarkMode = () => {
